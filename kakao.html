@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex"><title>카카오 연결 | 흑백리뷰</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><div class="wrap"><a class="logo" href="/">흑백리뷰</a></div></header>
+<main class="wrap doc">
+<h1>카카오톡 보고 연결</h1>
+<p id="msg">확인 코드를 불러오는 중입니다.</p>
+<p><b id="code" style="font-size:20px;word-break:break-all"></b></p>
+<p><button id="copy" class="btn" style="border:0;display:none">코드 복사</button></p>
+<p class="meta">이 코드를 이남수 감독에게 카카오톡으로 보내 주세요. 코드는 한 번만 쓰이고 10분 뒤 만료됩니다.</p>
+</main>
+<script>
+const p = new URLSearchParams(location.search), code = p.get("code");
+document.getElementById("msg").textContent = code ? "연결 동의가 완료됐습니다. 아래 코드를 복사해 보내 주세요." : "코드가 없습니다: " + (p.get("error_description") || "다시 시도해 주세요.");
+if (code) {
+  document.getElementById("code").textContent = code;
+  const b = document.getElementById("copy"); b.style.display = "inline-block";
+  b.onclick = () => navigator.clipboard.writeText(code).then(() => b.textContent = "복사됨");
+}
+</script>
+</body></html>
