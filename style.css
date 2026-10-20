@@ -1,0 +1,27 @@
+:root{--ink:#1d1d1b;--muted:#6b6b66;--line:#e6e5df;--paper:#fbfaf7;--accent:#111}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;letter-spacing:-.5px;text-decoration:none;font-size:18px}
+nav a{margin-left:18px;font-size:14px;color:var(--muted);text-decoration:none}
+nav a:hover{color:var(--ink)}
+.hero{padding:88px 0 56px}
+.eyebrow{font-size:13px;color:var(--muted);letter-spacing:.08em}
+h1{font-size:40px;line-height:1.25;letter-spacing:-1px;margin:12px 0 18px}
+.lead{font-size:17px;color:#3a3a37;max-width:560px}
+.btn{display:inline-block;margin-top:28px;background:var(--accent);color:#fff;text-decoration:none;padding:12px 20px;border-radius:8px;font-weight:600;font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:8px 0 64px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:18px}
+.card b{display:block;margin-bottom:4px}
+.card span{color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:13px}
+footer a{margin-right:14px}
+.doc{padding:56px 0 72px}
+.doc h1{font-size:30px}
+.doc h2{font-size:18px;margin-top:36px}
+.doc p,.doc li{color:#33332f;font-size:15px}
+.meta{color:var(--muted);font-size:14px}
+@media (max-width:640px){h1{font-size:30px}.cards{grid-template-columns:1fr}.hero{padding:56px 0 40px}}
