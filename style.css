@@ -1,6 +1,6 @@
 :root{--ink:#1d1d1b;--muted:#6b6b66;--line:#e6e5df;--paper:#fbfaf7;--accent:#111}
 *{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Malgun Gothic",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;word-break:keep-all}
 a{color:inherit}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 header{border-bottom:1px solid var(--line)}
@@ -20,11 +20,16 @@ h1{font-size:40px;line-height:1.25;letter-spacing:-1px;margin:12px 0 18px}
 .card span{color:var(--muted);font-size:14px}
 footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:13px}
 footer a{margin-right:14px}
-footer .biz{display:flex;flex-direction:column;gap:2px;margin-bottom:14px}
-footer .biz b{color:var(--ink)}
-footer .biz a{margin:0}
-footer .tbd{font-style:normal}
-footer .links{margin-bottom:6px}
+footer .biz b{display:block;color:var(--ink);font-size:14px;margin-bottom:10px}
+footer dl{display:grid;grid-template-columns:52px 1fr;gap:4px 12px;margin:0 0 22px}
+footer dt{color:#9a9993}
+footer dd{margin:0;color:#4a4a45}
+footer dd a{margin:0;text-decoration:none}
+footer dd a:hover{text-decoration:underline}
+footer .tbd{color:#b3b2ab}
+footer .bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid var(--line);padding-top:16px}
+footer .links a{text-decoration:none}
+footer .links a:hover{text-decoration:underline}
 .doc{padding:56px 0 72px}
 .doc h1{font-size:30px}
 .doc h2{font-size:18px;margin-top:36px}
